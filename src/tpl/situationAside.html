@@ -1,0 +1,41 @@
+<div class="aside" tabindex="-1" role="dialog" >
+  <div class="aside-dialog">
+    <div class="aside-content">
+      <div class="aside-header" >
+        <button type="button" class="close" ng-click="$hide()">&times;</button>
+        <h4 class="aside-title" >Entity 列表</h4>
+      </div>
+      <div class="aside-body" >
+
+        <!-- search form -->
+        <div>
+        <form class="navbar-form navbar-form-lg navbar-left" role="search" ng-submit="entitySearch()">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text"  id="entityKeyword" class="form-control input-sm bg-light no-border rounded padder" placeholder="Search projects..." ng-model="entityKeyword" ng-change="entitySearch($value)">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </div>
+        </form>
+        </div>
+        <hr>
+        <hr>
+        <hr>
+        <!-- / search form -->
+        <div class="m-b-sm" ng-repeat="entity in shownEntities">
+          <a ng-click="chooseEntity($index)">{{entity.name}}</a>
+        </div>
+
+        
+        <h4 ng-hide="shownEntities.length > 0">无Entity</h4>
+
+      </div>
+      <div class="aside-footer">
+        <button type="button" class="btn btn-default" ng-click="show()">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>

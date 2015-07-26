@@ -1,0 +1,122 @@
+      <!-- navbar header -->
+      <div class="navbar-header {{app.settings.navbarHeaderColor}}">
+        <button class="pull-right visible-xs dk" ui-toggle-class="show" data-target=".navbar-collapse">
+          <i class="glyphicon glyphicon-cog"></i>
+        </button>
+        <button class="pull-right visible-xs" ui-toggle-class="off-screen" data-target=".app-aside" ui-scroll-to="app">
+          <i class="glyphicon glyphicon-align-justify"></i>
+        </button>
+        <!-- brand -->
+        <a href="#/" class="navbar-brand text-lt">
+          <i class="fa fa-btc"></i>
+          <img src="img/logo.png" alt="." class="hide">
+          <span class="hidden-folded m-l-xs">{{app.name}}</span>
+        </a>
+        <!-- / brand -->
+      </div>
+      <!-- / navbar header -->
+
+      <!-- navbar collapse -->
+      <div class="collapse pos-rlt navbar-collapse box-shadow {{app.settings.navbarCollapseColor}}">
+        <!-- buttons -->
+        <!-- <div class="nav navbar-nav hidden-xs">
+          <a href class="btn no-shadow navbar-btn" ng-click="app.settings.asideFolded = !app.settings.asideFolded">
+            <i class="fa {{app.settings.asideFolded ? 'fa-indent' : 'fa-dedent'}} fa-fw"></i>
+          </a>
+          
+        </div> -->
+        <!-- / buttons -->
+
+        <!-- link and dropdown -->
+        
+        <ul class="nav navbar-nav hidden-sm" >
+          <!-- <li ng-controller="downloadCtrl">
+            <a ng-click="downloadMap($event)" download="map.png">
+                <span>下載</span>
+            </a>
+          </li> -->
+
+          <!-- <li ng-controller="layersCtrl">
+            <a ng-click="showLayersPanel()">
+                <span>所有图层</span>
+            </a>
+          </li> -->
+
+          <!-- <li class="dropdown" dropdown ng-controller="viewCtrl">
+            <a href class="dropdown-toggle" dropdown-toggle>
+              <span>视图切换</span> 
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu animated fadeInUp w" role="menu">
+              <li >
+                  <button class="btn btn-default btn-block" ng-click="toggle23D()"> 23D切换</button>
+              </li>
+              <li >
+                  <button class="btn btn-default btn-block" ng-click="toggleViews()"> 单、双视图</button>
+              </li>
+           
+          
+            </ul>
+          </li> -->
+
+        
+        </ul>
+
+        <!-- / link and dropdown -->
+
+        <!-- search form -->
+        <form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" target=".navbar-collapse" role="search" ng-controller="geocoderCtrl">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control input-sm bg-light no-border rounded padder" placeholder="搜索位置(eg: 西安)">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </div>
+        </form>
+        <!--/ search form -->
+
+        <!-- nabar right -->
+        <ul class="nav navbar-nav navbar-right">
+  
+          <li class="dropdown" dropdown >
+            <a href class="dropdown-toggle" dropdown-toggle>
+              <span>已加载</span> 
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu animated fadeInUp w" role="menu" ng-if="loadedLayers.length > 0">
+               <li ng-repeat="config in loadedLayers">
+                   
+                     <button class="btn btn-default dd-handle" data-id="{{$index+1}}" style="width: 120px;display: inline-block;" ng-click="toggleLayer(config,$index)" ng-class="{true:'btn-success'}[config.visible]"> {{config.layer.slice(0,4)}}({{config.SRS}})</button>
+                 
+                     <i class="fa fa-cog text-info-lter text-lg" ng-click="configLayer(config)"></i>
+                 </li>
+            </ul>
+            
+            <ul class="dropdown-menu animated fadeInUp w" role="menu" ng-if="loadedLayers.length === 0">
+              <span class="text-danger">请先加载图层！</span>
+            </ul>
+          </li>
+          
+          <li class="dropdown" dropdown ng-controller="projCtrl">
+            <a href class="dropdown-toggle " dropdown-toggle>
+              <span>投影切换</span> 
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight w" role="menu">
+              <li >
+                  <button class="btn btn-default btn-block" ng-class="{true:'btn-success'}[proj==='EPSG:4326']" ng-click="view4326()"> 地理坐标投影(EPSG:4326)</button>
+              </li>
+              <li >
+                  <button class="btn btn-default btn-block" ng-class="{true:'btn-success'}[proj==='EPSG:3857']" ng-click="view3857()"> 墨卡托投影(EPSG:3857)</button>
+              </li>
+            </ul>
+          </li>
+          
+        </ul>
+        <!-- / navbar right -->
+
+      </div>
+      <!-- / navbar collapse -->
+  

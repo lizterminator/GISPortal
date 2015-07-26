@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE WMT_MS_Capabilities SYSTEM "http://localhost:8090/iserver/services/map-world/wms111?request=getdtd&file=wms,1.1.1,capabilities_1_1_1.dtd">
+<WMT_MS_Capabilities version="1.1.1">
+    <Service>
+        <Name>OGC:WMS</Name>
+        <Title>SuperMap iServer 发布的 WMS 服务</Title>
+        <Abstract>北京超图软件股份有限公司提供的 WMS 服务. 联系方式: support@supermap.com.</Abstract>
+        <KeywordList>
+            <Keyword>iServer</Keyword>
+        </KeywordList>
+        <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="http://localhost:8090/iserver/services/map-world/wms111?MAP=%E4%B8%96%E7%95%8C%E5%9C%B0%E5%9B%BE_Day&amp;"
+            xlink:type="simple" />
+        <ContactInformation>
+            <ContactPersonPrimary>
+                <ContactPerson>联系人姓名</ContactPerson>
+                <ContactOrganization>北京超图软件股份有限公司</ContactOrganization>
+            </ContactPersonPrimary>
+            <ContactPosition />
+            <ContactAddress>
+                <AddressType>postal</AddressType>
+                <Address>北京市朝阳区酒仙桥北路甲10号院201号楼E门3层</Address>
+                <City>北京</City>
+                <StateOrProvince>北京</StateOrProvince>
+                <PostCode>100015</PostCode>
+                <Country>中国</Country>
+            </ContactAddress>
+            <ContactVoiceTelephone>+86-10-59896655</ContactVoiceTelephone>
+            <ContactFacsimileTelephone>+86-10-59896666</ContactFacsimileTelephone>
+            <ContactElectronicMailAddress>support@supermap.com</ContactElectronicMailAddress>
+        </ContactInformation>
+        <Fees>none</Fees>
+        <AccessConstraints>none</AccessConstraints>
+    </Service>
+    <Capability>
+        <Request>
+            <GetCapabilities>
+                <Format>application/vnd.ogc.wms_xml</Format>
+                <Format>text/xml</Format>
+                <Format>text/html</Format>
+                <DCPType>
+                    <HTTP>
+                        <Get>
+                            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xlink:href="http://localhost:8090/iserver/services/map-world/wms111?MAP=%E4%B8%96%E7%95%8C%E5%9C%B0%E5%9B%BE_Day&amp;"
+                                xlink:type="simple" />
+                        </Get>
+                        <Post>
+                            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xlink:href="http://localhost:8090/iserver/services/map-world/wms111?MAP=%E4%B8%96%E7%95%8C%E5%9C%B0%E5%9B%BE_Day&amp;"
+                                xlink:type="simple" />
+                        </Post>
+                    </HTTP>
+                </DCPType>
+            </GetCapabilities>
+            <GetMap>
+                <Format>image/png</Format>
+                <Format>image/bmp</Format>
+                <Format>image/jpeg</Format>
+                <DCPType>
+                    <HTTP>
+                        <Get>
+                            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xlink:href="http://localhost:8090/iserver/services/map-world/wms111?MAP=%E4%B8%96%E7%95%8C%E5%9C%B0%E5%9B%BE_Day&amp;"
+                                xlink:type="simple" />
+                        </Get>
+                    </HTTP>
+                </DCPType>
+            </GetMap>
+            <GetFeatureInfo>
+                <Format>application/vnd.ogc.wms_xml</Format>
+                <Format>text/xml</Format>
+                <Format>text/html</Format>
+                <DCPType>
+                    <HTTP>
+                        <Get>
+                            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xlink:href="http://localhost:8090/iserver/services/map-world/wms111?MAP=%E4%B8%96%E7%95%8C%E5%9C%B0%E5%9B%BE_Day&amp;"
+                                xlink:type="simple" />
+                        </Get>
+                    </HTTP>
+                </DCPType>
+            </GetFeatureInfo>
+        </Request>
+        <Exception>
+            <Format>application/vnd.ogc.se_xml</Format>
+            <Format>XML</Format>
+        </Exception>
+		<Layer>
+			<Name>0</Name>
+			<Title>世界地图_Day</Title>
+			<SRS>EPSG:4326</SRS>
+			<LatLonBoundingBox minx="-180.0" miny="-90.0"
+				maxx="180.0" maxy="90.0" />
+			<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0"
+				maxx="180.0" maxy="90.0" />
+			<Layer queryable="1">
+				<Name>0.0</Name>
+				<Title>Day@World</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-180.0" miny="-89.99999999999997"
+					maxx="180.0" maxy="89.99999999999997" />
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-89.99999999999997"
+					maxx="180.0" maxy="89.99999999999997" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.1</Name>
+				<Title>ContinentLabel@World</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="120.53556537446984"
+					miny="34.09592439558905" maxx="125.3455355728378" maxy="39.98430295074346" />
+				<BoundingBox SRS="EPSG:4326" minx="-119.53556537446984"
+					miny="-86.09592439558905" maxx="154.3455355728378" maxy="55.98430295074346" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.2</Name>
+				<Title>OceanLabel@World</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-174.00222163542406"
+					miny="-27.655258823816418" maxx="167.01111285379795" maxy="86.79330098005532" />
+				<BoundingBox SRS="EPSG:4326" minx="-174.00222163542406"
+					miny="-27.655258823816418" maxx="167.01111285379795" maxy="86.79330098005532" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.3</Name>
+				<Title>标签专题图</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-165.95742956747793"
+					miny="-9.314728112497873" maxx="136.47574396746927" maxy="85.66307648003726" />
+				<BoundingBox SRS="EPSG:4326" minx="-165.95742956747793"
+					miny="-9.314728112497873" maxx="136.47574396746927" maxy="85.66307648003726" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.4</Name>
+				<Title>OceanLabelP_C@World</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-165.95742956747793"
+					miny="-9.314728112497873" maxx="136.47574396746927" maxy="85.66307648003726" />
+				<BoundingBox SRS="EPSG:4326" minx="-165.95742956747793"
+					miny="-9.314728112497873" maxx="136.47574396746927" maxy="85.66307648003726" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.5</Name>
+				<Title>标签专题图#1</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-166.0513892339789"
+					miny="-19.7167779655572" maxx="136.70336123401063" maxy="78.35777582760446" />
+				<BoundingBox SRS="EPSG:4326" minx="-166.0513892339789"
+					miny="-19.7167779655572" maxx="136.70336123401063" maxy="78.35777582760446" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.6</Name>
+				<Title>OceanLabelP_E@World</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-166.0513892339789"
+					miny="-19.7167779655572" maxx="136.70336123401063" maxy="78.35777582760446" />
+				<BoundingBox SRS="EPSG:4326" minx="-166.0513892339789"
+					miny="-19.7167779655572" maxx="136.70336123401063" maxy="78.35777582760446" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.7</Name>
+				<Title>标签专题图#2</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-99.12757110595705"
+					miny="-41.21039581298828" maxx="175.14494323730466" maxy="64.31326293945314" />
+				<BoundingBox SRS="EPSG:4326" minx="-99.12757110595705"
+					miny="-41.21039581298828" maxx="175.14494323730466" maxy="64.31326293945314" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.8</Name>
+				<Title>Capitals@World</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-99.12757110595705"
+					miny="-41.21039581298828" maxx="175.14494323730466" maxy="64.31326293945314" />
+				<BoundingBox SRS="EPSG:4326" minx="-99.12757110595705"
+					miny="-41.21039581298828" maxx="175.14494323730466" maxy="64.31326293945314" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.9</Name>
+				<Title>ContinentBoundary@World</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-175.20711490151245"
+					miny="-9.500760592213298" maxx="131.7577398056715" maxy="70.43669187670935" />
+				<BoundingBox SRS="EPSG:4326" minx="-175.20711490151245"
+					miny="-9.500760592213298" maxx="131.7577398056715" maxy="70.43669187670935" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.10</Name>
+				<Title>CountryLabel@World</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-178.96608326558336"
+					miny="-50.49680374515408" maxx="176.8499072304239" maxy="75.97552711993293" />
+				<BoundingBox SRS="EPSG:4326" minx="-178.96608326558336"
+					miny="-50.49680374515408" maxx="176.8499072304239" maxy="75.97552711993293" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.11</Name>
+				<Title>单值专题图</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-180.0" miny="-90.0"
+					maxx="180.0" maxy="83.62359619140626" />
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0"
+					maxx="180.0" maxy="83.62359619140626" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.12</Name>
+				<Title>Countries@World</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-180.0" miny="-90.0"
+					maxx="180.0" maxy="83.62359619140626" />
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0"
+					maxx="180.0" maxy="83.62359619140626" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.13</Name>
+				<Title>Lakes@World</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-125.12331818181818"
+					miny="-16.606263636363636" maxx="109.965" maxy="67.04693636363636" />
+				<BoundingBox SRS="EPSG:4326" minx="-125.12331818181818"
+					miny="-16.606263636363636" maxx="109.965" maxy="67.04693636363636" />
+			</Layer>
+			<Layer queryable="1">
+				<Name>0.14</Name>
+				<Title>Ocean@World</Title>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="-180.0" miny="-90.0"
+					maxx="180.0" maxy="90.0" />
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0"
+					maxx="180.0" maxy="90.0" />
+			</Layer>
+		</Layer>
+    </Capability>
+</WMT_MS_Capabilities>

@@ -1,0 +1,18 @@
+.Thumbnail {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	width: 400px;
+	height: 200px;
+	opacity: 0.7;
+}
+.round{position: absolute;left: 140px;bottom: 100px; z-index:9999; width:16px;height:16px;display: inline-block;font-size:20px;line-heigth:16px;text-align:center;color:#f00;text-decoration:none}
+.round:hover{color:blue;text-decoration:none} 
+
+.rotateBtn {
+	position: absolute;left: 391px;bottom: 20px; z-index: 8888;opacity: 0.9;
+}
+
+.rotateArrow {
+	display: block;font-weight: 400;font-size: 1.2em;
+}

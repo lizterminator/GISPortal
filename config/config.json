@@ -1,0 +1,9 @@
+{
+	"defaultSituationUrl": "http://localhost:8082/simple.czml",
+
+	"defaultHotspotsUrl": "../data/hostspots.json",
+
+	"tileStreamTileUrl": "http://localhost:8888/v2/{layerName}/{z}/{x}/{y}.png",
+	
+	"tileStreamLayerUrl": "http://localhost:8888/api/"
+}

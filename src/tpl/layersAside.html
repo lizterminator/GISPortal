@@ -1,0 +1,68 @@
+
+<div class="aside" tabindex="-1" role="dialog" >
+<div cg-busy="myPromise">
+  <div class="aside-dialog">
+    <div class="aside-content">
+      <div class="aside-header" >
+        <button type="button" class="close" ng-click="$hide()">&times;</button>
+        <h4 class="aside-title" >数据集</h4>
+      </div>
+      <div class="aside-body" >
+
+        <!-- search form -->
+        <div>
+        <form class="navbar-form navbar-form-lg " role="search" ng-submit="datasetSearch()">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text"  id="keyword" class="form-control input-sm bg-light no-border rounded padder" placeholder="搜索数据集 ..." ng-model="keyword" ng-change="datasetSearch($value)">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </div>
+        </form>
+        </div>
+        <hr>
+        
+<!-- bsActivePane is optional -->
+<div bs-active-pane="datasets.activeTab" bs-tabs>
+  <div ng-repeat="tab in datasets" title="{{ tab.title }}" name="{{ tab.title }}" bs-pane>
+  <!-- ngModel is optional -->
+    <div class="panel-group" role="tablist" aria-multiselectable="true" bs-collapse>
+      <div class="panel panel-default" ng-repeat="cla in tab.classes">
+        <div class="panel-heading" role="tab">
+          <h4 class="panel-title">
+            <a bs-collapse-toggle>
+              {{ cla.title }} ({{cla.data.length}})
+            </a>
+          </h4>
+        </div>
+        <div class="panel-collapse" role="tabpanel" bs-collapse-target>
+          <div class="panel-body">
+            <div ng-repeat="data in cla.data">
+            <button type="button" class="btn btn-success btn-block" title="{{data.layer}}" data-content="{{data}}" data-placement="top-right" data-template="tpl/menu.html" data-animation="am-flip-x" data-auto-close="1" bs-popover>{{data.layer}}
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+        <!-- / search form -->
+        <!-- <div class="m-b-sm" ng-repeat="entity in shownEntities">
+          <a ng-click="chooseEntity($index)">{{entity.name}}</a>
+        </div>
+        
+        
+        <h4 ng-hide="shownEntities.length > 0">无Entity</h4> -->
+
+      </div>
+      <div class="aside-footer">
+        <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

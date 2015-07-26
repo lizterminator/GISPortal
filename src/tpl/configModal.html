@@ -1,0 +1,23 @@
+
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" >
+        <button type="button" class="close" ng-click="$hide()">&times;</button>
+        <h4 class="modal-title" >基本配置 (施工中)</h4>
+      </div>
+      <div class="modal-body" >
+		    <label for="tileUrl">瓦片url模板</label>
+        <input type="text" placeholder="例: http://localhost:8888/v2/{layerName}/{z}/{x}/{y}.png" class="w-full"  name="tileUrl" id="tileUrl" ng-model="tileUrl" >
+        <br><br>
+        <label for="metaUrl">元数据url</label>
+        <input type="text" placeholder="例: http://localhost:8888/api/" class="w-full"  name="metaUrl" id="metaUrl" ng-model="metaUrl" >
+        
+      </div>
+      <div class="modal-footer">
+      	<button class="btn btn-primary" ng-click="saveConfig()">保存</button>   
+        <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

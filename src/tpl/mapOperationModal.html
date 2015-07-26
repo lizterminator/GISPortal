@@ -1,0 +1,28 @@
+
+<div class="modal" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog">
+  <div cg-busy="myPromise">
+    <div class="modal-content">
+      <div class="modal-header" >
+        <button type="button" class="close" ng-click="$hide()">&times;</button>
+        <h4 class="modal-title" >{{title}} <span class="badge" ng-class="{true:'bg-success',false:'bg-danger'}[records.length>0]">{{records.length}}</span></h4>
+      </div>
+      <div class="modal-body" >
+        <div class="wrapper-md" ng-repeat="record in records">
+          <label style="margin-right: 40px;" class="label bg-dark">{{record.layer.slice(0,10)}}</label>
+		      <button class="btn btn-default btn-success" ng-disabled="!requestOK" ng-click="loadLayer(record)"> 加载 </button>
+          <button class="btn btn-default btn-danger" ng-disabled="!requestOK" ng-click="unloadLayer(record)"> 卸载 </button>
+          <button class="btn btn-default btn-info" ng-disabled="!requestOK" ng-click="meta(record)"> 元数据 </button>
+          <button class="btn btn-default btn-primary" ng-disabled="!requestOK" ng-click="fly(record.bbox)"> 定位范围 </button>
+          <span class="badge bg-success" ng-show="record.loaded">已加載</span>
+        </div>
+        <hr>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

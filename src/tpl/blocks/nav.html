@@ -1,0 +1,14 @@
+<ul class="nav" ng-controller="AbnTestController">
+  <div class="bg-light dk r r-2x">
+        <abn-tree 
+          tree-data         = "my_data" 
+          tree-control      = "my_tree" 
+          on-select         = "my_tree_handler(branch)" 
+          expand-level      = "4" 
+          icon-leaf         = "fa fa-photo text-info"
+          icon-expand       = "fa fa-plus text-warning"
+          icon-collapse     = "fa fa-minus text-success"
+          >
+        </abn-tree>
+      </div>
+</ul>

@@ -1,0 +1,47 @@
+{
+  "name": "GISPortal",
+  "version": "2.0.1",
+  "description": "A small map app build with angular && cesium",
+  "scripts": {
+    "start": "node node_modules/http-server/bin/http-server -o"
+  },
+  
+  "keywords": [
+    "AngularJS",
+	  "CesiumJS",
+    "Openlayers3",
+    "GIS"
+  ],
+  "repository": "https://github.com/lizterminator/GISPortal.git",
+  "author": "lizterminator",
+  "dependencies": {},
+  "devDependencies": {
+    
+  },
+  "main":"src/index.html",
+  "window": {
+
+    "title": "angular-cesium map app",
+
+    "toolbar": false,
+
+    "frame": true,
+	
+	   "resizable": true,
+	
+	
+	
+    "width": 800,
+
+    "height": 500,
+
+    "position": "center",
+
+    "min_width": 400,
+
+    "min_height": 200
+
+
+  }
+  
+}
